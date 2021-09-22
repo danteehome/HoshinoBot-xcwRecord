@@ -123,9 +123,10 @@ async def pulipuli(bot, event):
     keyword1 = '&#91;QQ小程序&#93;哔哩哔哩'
     keyword2 = '[[QQ小程序]哔哩哔哩]'
     keyword3 = '&#91;&#91;QQ小程序&#93;哔哩哔哩&#93'
+    keyword4 = '"哔哩哔哩"&amp;#44'
     if len(is_match) > 0:
         sv.logger.info('[pulipuli INFO] is_match is True')
-        if match_msg(keyword1, msg) == True or match_msg(keyword3, msg) == True or match_msg(keyword2, msg) == True:
+        if match_msg(keyword1, msg) == True or match_msg(keyword2, msg) == True or match_msg(keyword3, msg) == True or match_msg(keyword4, msg) == True::
             sv.logger.info('[pulipuli INFO] fuck mini program')
             await bot.send(event, R.img('fuckapp.png').cqcode)
             search = re.findall(r'"desc":"(.+?)"', msg)
